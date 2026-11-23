@@ -1,0 +1,50 @@
+name: Pico Brain Challenge - Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_slot:
+        description: "Video slot"
+        required: false
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+          - "2"
+
+concurrency:
+  group: youtube-auto-shorts-en
+  cancel-in-progress: false
+
+jobs:
+  create-video:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get files
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-noto-cjk
+          python -m pip install pillow google-api-python-client google-auth google-auth-httplib2
+
+      - name: Create video
+        env:
+          VIDEO_SLOT: ${{ inputs.video_slot || '0' }}
+        run: python create_video.py
+
+      - name: Save video
+        uses: actions/upload-artifact@v4
+        with:
+          name: youtube-short
+          path: output/short.mp4
+
+      - name: Upload to YouTube
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID_EN }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET_EN }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN_EN }}
+        run: python upload_video.py
