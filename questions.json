@@ -1,0 +1,1902 @@
+[
+  {
+    "id": 1,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "2 → 5 → 9 → 14 → ?",
+    "choices": [
+      "23",
+      "21",
+      "18",
+      "20"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 3, 4, 5",
+      "Next difference: 6",
+      "14 + 6 = 20"
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "3 + 5 × 4 = ?",
+    "choices": [
+      "21",
+      "26",
+      "23",
+      "24"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "5 × 4 = 20",
+      "3 + 20 = 23"
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "40% of 120 = ?",
+    "choices": [
+      "49",
+      "46",
+      "51",
+      "48"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "40% = 40/100",
+      "120 × 40 ÷ 100",
+      "The result is 48"
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "5x + 6 = 26",
+    "choices": [
+      "5",
+      "7",
+      "4",
+      "2"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 6 from both sides.",
+      "5x = 20",
+      "x = 20 ÷ 5 = 4"
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "16 → 25 → 36 → 49 → ?",
+    "choices": [
+      "65",
+      "67",
+      "62",
+      "64"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Squares: 4², 5², 6², 7²",
+      "Next is 8²",
+      "8 × 8 = 64"
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "3 → 7 → 12 → 18 → ?",
+    "choices": [
+      "26",
+      "23",
+      "28",
+      "25"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 4, 5, 6",
+      "Next difference: 7",
+      "18 + 7 = 25"
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "4 + 6 × 5 = ?",
+    "choices": [
+      "37",
+      "35",
+      "34",
+      "32"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "6 × 5 = 30",
+      "4 + 30 = 34"
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "50% of 130 = ?",
+    "choices": [
+      "66",
+      "63",
+      "65",
+      "68"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "50% = 50/100",
+      "130 × 50 ÷ 100",
+      "The result is 65"
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "6x + 7 = 37",
+    "choices": [
+      "5",
+      "8",
+      "6",
+      "3"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 7 from both sides.",
+      "6x = 30",
+      "x = 30 ÷ 6 = 5"
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "25 → 36 → 49 → 64 → ?",
+    "choices": [
+      "84",
+      "79",
+      "81",
+      "82"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Squares: 5², 6², 7², 8²",
+      "Next is 9²",
+      "9 × 9 = 81"
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "4 → 9 → 15 → 22 → ?",
+    "choices": [
+      "33",
+      "31",
+      "28",
+      "30"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 5, 6, 7",
+      "Next difference: 8",
+      "22 + 8 = 30"
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "5 + 7 × 6 = ?",
+    "choices": [
+      "45",
+      "50",
+      "48",
+      "47"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "7 × 6 = 42",
+      "5 + 42 = 47"
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20% of 140 = ?",
+    "choices": [
+      "26",
+      "29",
+      "28",
+      "31"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "20% = 20/100",
+      "140 × 20 ÷ 100",
+      "The result is 28"
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "7x + 8 = 50",
+    "choices": [
+      "9",
+      "4",
+      "7",
+      "6"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Subtract 8 from both sides.",
+      "7x = 42",
+      "x = 42 ÷ 7 = 6"
+    ]
+  },
+  {
+    "id": 15,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "36 → 49 → 64 → 81 → ?",
+    "choices": [
+      "100",
+      "101",
+      "98",
+      "103"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Squares: 6², 7², 8², 9²",
+      "Next is 10²",
+      "10 × 10 = 100"
+    ]
+  },
+  {
+    "id": 16,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "5 → 11 → 18 → 26 → ?",
+    "choices": [
+      "33",
+      "35",
+      "38",
+      "36"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 6, 7, 8",
+      "Next difference: 9",
+      "26 + 9 = 35"
+    ]
+  },
+  {
+    "id": 17,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "6 + 8 × 7 = ?",
+    "choices": [
+      "63",
+      "60",
+      "65",
+      "62"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "8 × 7 = 56",
+      "6 + 56 = 62"
+    ]
+  },
+  {
+    "id": 18,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "30% of 150 = ?",
+    "choices": [
+      "46",
+      "43",
+      "45",
+      "48"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "30% = 30/100",
+      "150 × 30 ÷ 100",
+      "The result is 45"
+    ]
+  },
+  {
+    "id": 19,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "8x + 9 = 65",
+    "choices": [
+      "5",
+      "10",
+      "8",
+      "7"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Subtract 9 from both sides.",
+      "8x = 56",
+      "x = 56 ÷ 8 = 7"
+    ]
+  },
+  {
+    "id": 20,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "49 → 64 → 81 → 100 → ?",
+    "choices": [
+      "121",
+      "122",
+      "124",
+      "119"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Squares: 7², 8², 9², 10²",
+      "Next is 11²",
+      "11 × 11 = 121"
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "6 → 13 → 21 → 30 → ?",
+    "choices": [
+      "40",
+      "43",
+      "38",
+      "41"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Differences: 7, 8, 9",
+      "Next difference: 10",
+      "30 + 10 = 40"
+    ]
+  },
+  {
+    "id": 22,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "7 + 9 × 8 = ?",
+    "choices": [
+      "79",
+      "77",
+      "82",
+      "80"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Multiply before adding.",
+      "9 × 8 = 72",
+      "7 + 72 = 79"
+    ]
+  },
+  {
+    "id": 23,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "40% of 160 = ?",
+    "choices": [
+      "65",
+      "62",
+      "67",
+      "64"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "40% = 40/100",
+      "160 × 40 ÷ 100",
+      "The result is 64"
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "3x + 10 = 34",
+    "choices": [
+      "11",
+      "6",
+      "8",
+      "9"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 10 from both sides.",
+      "3x = 24",
+      "x = 24 ÷ 3 = 8"
+    ]
+  },
+  {
+    "id": 25,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "64 → 81 → 100 → 121 → ?",
+    "choices": [
+      "147",
+      "144",
+      "145",
+      "142"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 8², 9², 10², 11²",
+      "Next is 12²",
+      "12 × 12 = 144"
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "7 → 15 → 24 → 34 → ?",
+    "choices": [
+      "46",
+      "43",
+      "45",
+      "48"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Differences: 8, 9, 10",
+      "Next difference: 11",
+      "34 + 11 = 45"
+    ]
+  },
+  {
+    "id": 27,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "8 + 10 × 2 = ?",
+    "choices": [
+      "26",
+      "31",
+      "29",
+      "28"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "10 × 2 = 20",
+      "8 + 20 = 28"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "50% of 170 = ?",
+    "choices": [
+      "86",
+      "83",
+      "85",
+      "88"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "50% = 50/100",
+      "170 × 50 ÷ 100",
+      "The result is 85"
+    ]
+  },
+  {
+    "id": 29,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "4x + 11 = 47",
+    "choices": [
+      "7",
+      "10",
+      "9",
+      "12"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 11 from both sides.",
+      "4x = 36",
+      "x = 36 ÷ 4 = 9"
+    ]
+  },
+  {
+    "id": 30,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "81 → 100 → 121 → 144 → ?",
+    "choices": [
+      "169",
+      "170",
+      "172",
+      "167"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Squares: 9², 10², 11², 12²",
+      "Next is 13²",
+      "13 × 13 = 169"
+    ]
+  },
+  {
+    "id": 31,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "8 → 17 → 27 → 38 → ?",
+    "choices": [
+      "53",
+      "50",
+      "48",
+      "51"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 9, 10, 11",
+      "Next difference: 12",
+      "38 + 12 = 50"
+    ]
+  },
+  {
+    "id": 32,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "9 + 11 × 3 = ?",
+    "choices": [
+      "42",
+      "40",
+      "45",
+      "43"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Multiply before adding.",
+      "11 × 3 = 33",
+      "9 + 33 = 42"
+    ]
+  },
+  {
+    "id": 33,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20% of 180 = ?",
+    "choices": [
+      "36",
+      "37",
+      "39",
+      "34"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "20% = 20/100",
+      "180 × 20 ÷ 100",
+      "The result is 36"
+    ]
+  },
+  {
+    "id": 34,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "5x + 12 = 62",
+    "choices": [
+      "11",
+      "8",
+      "10",
+      "13"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 12 from both sides.",
+      "5x = 50",
+      "x = 50 ÷ 5 = 10"
+    ]
+  },
+  {
+    "id": 35,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "100 → 121 → 144 → 169 → ?",
+    "choices": [
+      "197",
+      "199",
+      "196",
+      "194"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Squares: 10², 11², 12², 13²",
+      "Next is 14²",
+      "14 × 14 = 196"
+    ]
+  },
+  {
+    "id": 36,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "9 → 19 → 30 → 42 → ?",
+    "choices": [
+      "56",
+      "58",
+      "53",
+      "55"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 10, 11, 12",
+      "Next difference: 13",
+      "42 + 13 = 55"
+    ]
+  },
+  {
+    "id": 37,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "10 + 12 × 4 = ?",
+    "choices": [
+      "59",
+      "58",
+      "61",
+      "56"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Multiply before adding.",
+      "12 × 4 = 48",
+      "10 + 48 = 58"
+    ]
+  },
+  {
+    "id": 38,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "30% of 190 = ?",
+    "choices": [
+      "57",
+      "60",
+      "58",
+      "55"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "30% = 30/100",
+      "190 × 30 ÷ 100",
+      "The result is 57"
+    ]
+  },
+  {
+    "id": 39,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "6x + 13 = 79",
+    "choices": [
+      "12",
+      "11",
+      "9",
+      "14"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Subtract 13 from both sides.",
+      "6x = 66",
+      "x = 66 ÷ 6 = 11"
+    ]
+  },
+  {
+    "id": 40,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "121 → 144 → 169 → 196 → ?",
+    "choices": [
+      "223",
+      "226",
+      "228",
+      "225"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Squares: 11², 12², 13², 14²",
+      "Next is 15²",
+      "15 × 15 = 225"
+    ]
+  },
+  {
+    "id": 41,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "10 → 21 → 33 → 46 → ?",
+    "choices": [
+      "58",
+      "61",
+      "60",
+      "63"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Differences: 11, 12, 13",
+      "Next difference: 14",
+      "46 + 14 = 60"
+    ]
+  },
+  {
+    "id": 42,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "11 + 13 × 5 = ?",
+    "choices": [
+      "79",
+      "77",
+      "76",
+      "74"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "13 × 5 = 65",
+      "11 + 65 = 76"
+    ]
+  },
+  {
+    "id": 43,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "40% of 200 = ?",
+    "choices": [
+      "78",
+      "81",
+      "83",
+      "80"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "40% = 40/100",
+      "200 × 40 ÷ 100",
+      "The result is 80"
+    ]
+  },
+  {
+    "id": 44,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "7x + 14 = 98",
+    "choices": [
+      "10",
+      "12",
+      "15",
+      "13"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Subtract 14 from both sides.",
+      "7x = 84",
+      "x = 84 ÷ 7 = 12"
+    ]
+  },
+  {
+    "id": 45,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "144 → 169 → 196 → 225 → ?",
+    "choices": [
+      "257",
+      "256",
+      "254",
+      "259"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 12², 13², 14², 15²",
+      "Next is 16²",
+      "16 × 16 = 256"
+    ]
+  },
+  {
+    "id": 46,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "11 → 23 → 36 → 50 → ?",
+    "choices": [
+      "68",
+      "65",
+      "63",
+      "66"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 12, 13, 14",
+      "Next difference: 15",
+      "50 + 15 = 65"
+    ]
+  },
+  {
+    "id": 47,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "12 + 14 × 6 = ?",
+    "choices": [
+      "94",
+      "97",
+      "99",
+      "96"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "14 × 6 = 84",
+      "12 + 84 = 96"
+    ]
+  },
+  {
+    "id": 48,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "50% of 210 = ?",
+    "choices": [
+      "106",
+      "108",
+      "105",
+      "103"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "50% = 50/100",
+      "210 × 50 ÷ 100",
+      "The result is 105"
+    ]
+  },
+  {
+    "id": 49,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "8x + 15 = 119",
+    "choices": [
+      "11",
+      "13",
+      "14",
+      "16"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Subtract 15 from both sides.",
+      "8x = 104",
+      "x = 104 ÷ 8 = 13"
+    ]
+  },
+  {
+    "id": 50,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "169 → 196 → 225 → 256 → ?",
+    "choices": [
+      "290",
+      "292",
+      "287",
+      "289"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Squares: 13², 14², 15², 16²",
+      "Next is 17²",
+      "17 × 17 = 289"
+    ]
+  },
+  {
+    "id": 51,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "12 → 25 → 39 → 54 → ?",
+    "choices": [
+      "68",
+      "71",
+      "73",
+      "70"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 13, 14, 15",
+      "Next difference: 16",
+      "54 + 16 = 70"
+    ]
+  },
+  {
+    "id": 52,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "13 + 15 × 7 = ?",
+    "choices": [
+      "119",
+      "116",
+      "121",
+      "118"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "15 × 7 = 105",
+      "13 + 105 = 118"
+    ]
+  },
+  {
+    "id": 53,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20% of 220 = ?",
+    "choices": [
+      "44",
+      "42",
+      "47",
+      "45"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "20% = 20/100",
+      "220 × 20 ÷ 100",
+      "The result is 44"
+    ]
+  },
+  {
+    "id": 54,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "3x + 16 = 58",
+    "choices": [
+      "14",
+      "17",
+      "12",
+      "15"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 16 from both sides.",
+      "3x = 42",
+      "x = 42 ÷ 3 = 14"
+    ]
+  },
+  {
+    "id": 55,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "196 → 225 → 256 → 289 → ?",
+    "choices": [
+      "322",
+      "324",
+      "327",
+      "325"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 14², 15², 16², 17²",
+      "Next is 18²",
+      "18 × 18 = 324"
+    ]
+  },
+  {
+    "id": 56,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "13 → 27 → 42 → 58 → ?",
+    "choices": [
+      "75",
+      "73",
+      "76",
+      "78"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Differences: 14, 15, 16",
+      "Next difference: 17",
+      "58 + 17 = 75"
+    ]
+  },
+  {
+    "id": 57,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "14 + 16 × 8 = ?",
+    "choices": [
+      "142",
+      "143",
+      "145",
+      "140"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Multiply before adding.",
+      "16 × 8 = 128",
+      "14 + 128 = 142"
+    ]
+  },
+  {
+    "id": 58,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "30% of 230 = ?",
+    "choices": [
+      "70",
+      "72",
+      "67",
+      "69"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "30% = 30/100",
+      "230 × 30 ÷ 100",
+      "The result is 69"
+    ]
+  },
+  {
+    "id": 59,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "4x + 17 = 77",
+    "choices": [
+      "18",
+      "13",
+      "16",
+      "15"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Subtract 17 from both sides.",
+      "4x = 60",
+      "x = 60 ÷ 4 = 15"
+    ]
+  },
+  {
+    "id": 60,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "225 → 256 → 289 → 324 → ?",
+    "choices": [
+      "359",
+      "361",
+      "364",
+      "362"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 15², 16², 17², 18²",
+      "Next is 19²",
+      "19 × 19 = 361"
+    ]
+  },
+  {
+    "id": 61,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "14 → 29 → 45 → 62 → ?",
+    "choices": [
+      "81",
+      "83",
+      "78",
+      "80"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 15, 16, 17",
+      "Next difference: 18",
+      "62 + 18 = 80"
+    ]
+  },
+  {
+    "id": 62,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "15 + 17 × 2 = ?",
+    "choices": [
+      "47",
+      "52",
+      "49",
+      "50"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "17 × 2 = 34",
+      "15 + 34 = 49"
+    ]
+  },
+  {
+    "id": 63,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "40% of 240 = ?",
+    "choices": [
+      "97",
+      "94",
+      "96",
+      "99"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "40% = 40/100",
+      "240 × 40 ÷ 100",
+      "The result is 96"
+    ]
+  },
+  {
+    "id": 64,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "5x + 18 = 98",
+    "choices": [
+      "16",
+      "17",
+      "14",
+      "19"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 18 from both sides.",
+      "5x = 80",
+      "x = 80 ÷ 5 = 16"
+    ]
+  },
+  {
+    "id": 65,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "256 → 289 → 324 → 361 → ?",
+    "choices": [
+      "398",
+      "400",
+      "403",
+      "401"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 16², 17², 18², 19²",
+      "Next is 20²",
+      "20 × 20 = 400"
+    ]
+  },
+  {
+    "id": 66,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "15 → 31 → 48 → 66 → ?",
+    "choices": [
+      "88",
+      "86",
+      "85",
+      "83"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Differences: 16, 17, 18",
+      "Next difference: 19",
+      "66 + 19 = 85"
+    ]
+  },
+  {
+    "id": 67,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "16 + 18 × 3 = ?",
+    "choices": [
+      "71",
+      "73",
+      "70",
+      "68"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "18 × 3 = 54",
+      "16 + 54 = 70"
+    ]
+  },
+  {
+    "id": 68,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "50% of 250 = ?",
+    "choices": [
+      "123",
+      "126",
+      "128",
+      "125"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "50% = 50/100",
+      "250 × 50 ÷ 100",
+      "The result is 125"
+    ]
+  },
+  {
+    "id": 69,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "6x + 19 = 121",
+    "choices": [
+      "17",
+      "15",
+      "18",
+      "20"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 19 from both sides.",
+      "6x = 102",
+      "x = 102 ÷ 6 = 17"
+    ]
+  },
+  {
+    "id": 70,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "289 → 324 → 361 → 400 → ?",
+    "choices": [
+      "442",
+      "441",
+      "444",
+      "439"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 17², 18², 19², 20²",
+      "Next is 21²",
+      "21 × 21 = 441"
+    ]
+  },
+  {
+    "id": 71,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "16 → 33 → 51 → 70 → ?",
+    "choices": [
+      "93",
+      "91",
+      "88",
+      "90"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 17, 18, 19",
+      "Next difference: 20",
+      "70 + 20 = 90"
+    ]
+  },
+  {
+    "id": 72,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "17 + 19 × 4 = ?",
+    "choices": [
+      "94",
+      "91",
+      "93",
+      "96"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Multiply before adding.",
+      "19 × 4 = 76",
+      "17 + 76 = 93"
+    ]
+  },
+  {
+    "id": 73,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20% of 260 = ?",
+    "choices": [
+      "55",
+      "50",
+      "52",
+      "53"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "20% = 20/100",
+      "260 × 20 ÷ 100",
+      "The result is 52"
+    ]
+  },
+  {
+    "id": 74,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "7x + 20 = 146",
+    "choices": [
+      "21",
+      "18",
+      "16",
+      "19"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Subtract 20 from both sides.",
+      "7x = 126",
+      "x = 126 ÷ 7 = 18"
+    ]
+  },
+  {
+    "id": 75,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "324 → 361 → 400 → 441 → ?",
+    "choices": [
+      "482",
+      "484",
+      "485",
+      "487"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 18², 19², 20², 21²",
+      "Next is 22²",
+      "22 × 22 = 484"
+    ]
+  },
+  {
+    "id": 76,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "17 → 35 → 54 → 74 → ?",
+    "choices": [
+      "98",
+      "93",
+      "96",
+      "95"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Differences: 18, 19, 20",
+      "Next difference: 21",
+      "74 + 21 = 95"
+    ]
+  },
+  {
+    "id": 77,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "18 + 20 × 5 = ?",
+    "choices": [
+      "119",
+      "116",
+      "121",
+      "118"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "20 × 5 = 100",
+      "18 + 100 = 118"
+    ]
+  },
+  {
+    "id": 78,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "30% of 270 = ?",
+    "choices": [
+      "82",
+      "84",
+      "79",
+      "81"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "30% = 30/100",
+      "270 × 30 ÷ 100",
+      "The result is 81"
+    ]
+  },
+  {
+    "id": 79,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "8x + 21 = 173",
+    "choices": [
+      "19",
+      "22",
+      "20",
+      "17"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 21 from both sides.",
+      "8x = 152",
+      "x = 152 ÷ 8 = 19"
+    ]
+  },
+  {
+    "id": 80,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "361 → 400 → 441 → 484 → ?",
+    "choices": [
+      "532",
+      "529",
+      "527",
+      "530"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 19², 20², 21², 22²",
+      "Next is 23²",
+      "23 × 23 = 529"
+    ]
+  },
+  {
+    "id": 81,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "18 → 37 → 57 → 78 → ?",
+    "choices": [
+      "103",
+      "100",
+      "98",
+      "101"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 19, 20, 21",
+      "Next difference: 22",
+      "78 + 22 = 100"
+    ]
+  },
+  {
+    "id": 82,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "19 + 21 × 6 = ?",
+    "choices": [
+      "145",
+      "148",
+      "146",
+      "143"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Multiply before adding.",
+      "21 × 6 = 126",
+      "19 + 126 = 145"
+    ]
+  },
+  {
+    "id": 83,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "40% of 280 = ?",
+    "choices": [
+      "112",
+      "110",
+      "113",
+      "115"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "40% = 40/100",
+      "280 × 40 ÷ 100",
+      "The result is 112"
+    ]
+  },
+  {
+    "id": 84,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "3x + 22 = 82",
+    "choices": [
+      "23",
+      "18",
+      "20",
+      "21"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 22 from both sides.",
+      "3x = 60",
+      "x = 60 ÷ 3 = 20"
+    ]
+  },
+  {
+    "id": 85,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "400 → 441 → 484 → 529 → ?",
+    "choices": [
+      "574",
+      "579",
+      "576",
+      "577"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Squares: 20², 21², 22², 23²",
+      "Next is 24²",
+      "24 × 24 = 576"
+    ]
+  },
+  {
+    "id": 86,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "19 → 39 → 60 → 82 → ?",
+    "choices": [
+      "106",
+      "103",
+      "105",
+      "108"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Differences: 20, 21, 22",
+      "Next difference: 23",
+      "82 + 23 = 105"
+    ]
+  },
+  {
+    "id": 87,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20 + 22 × 7 = ?",
+    "choices": [
+      "175",
+      "174",
+      "177",
+      "172"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Multiply before adding.",
+      "22 × 7 = 154",
+      "20 + 154 = 174"
+    ]
+  },
+  {
+    "id": 88,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "50% of 290 = ?",
+    "choices": [
+      "146",
+      "143",
+      "148",
+      "145"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "50% = 50/100",
+      "290 × 50 ÷ 100",
+      "The result is 145"
+    ]
+  },
+  {
+    "id": 89,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "4x + 23 = 107",
+    "choices": [
+      "19",
+      "24",
+      "21",
+      "22"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 23 from both sides.",
+      "4x = 84",
+      "x = 84 ÷ 4 = 21"
+    ]
+  },
+  {
+    "id": 90,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "441 → 484 → 529 → 576 → ?",
+    "choices": [
+      "628",
+      "625",
+      "623",
+      "626"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Squares: 21², 22², 23², 24²",
+      "Next is 25²",
+      "25 × 25 = 625"
+    ]
+  },
+  {
+    "id": 91,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20 → 41 → 63 → 86 → ?",
+    "choices": [
+      "108",
+      "110",
+      "113",
+      "111"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 21, 22, 23",
+      "Next difference: 24",
+      "86 + 24 = 110"
+    ]
+  },
+  {
+    "id": 92,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "21 + 23 × 8 = ?",
+    "choices": [
+      "203",
+      "208",
+      "206",
+      "205"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "23 × 8 = 184",
+      "21 + 184 = 205"
+    ]
+  },
+  {
+    "id": 93,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "20% of 300 = ?",
+    "choices": [
+      "58",
+      "61",
+      "60",
+      "63"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "20% = 20/100",
+      "300 × 20 ÷ 100",
+      "The result is 60"
+    ]
+  },
+  {
+    "id": 94,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "5x + 24 = 134",
+    "choices": [
+      "22",
+      "25",
+      "20",
+      "23"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Subtract 24 from both sides.",
+      "5x = 110",
+      "x = 110 ÷ 5 = 22"
+    ]
+  },
+  {
+    "id": 95,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "484 → 529 → 576 → 625 → ?",
+    "choices": [
+      "676",
+      "674",
+      "679",
+      "677"
+    ],
+    "correct_index": 0,
+    "explanations": [
+      "Squares: 22², 23², 24², 25²",
+      "Next is 26²",
+      "26 × 26 = 676"
+    ]
+  },
+  {
+    "id": 96,
+    "category": "Sequences",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "21 → 43 → 66 → 90 → ?",
+    "choices": [
+      "118",
+      "115",
+      "116",
+      "113"
+    ],
+    "correct_index": 1,
+    "explanations": [
+      "Differences: 22, 23, 24",
+      "Next difference: 25",
+      "90 + 25 = 115"
+    ]
+  },
+  {
+    "id": 97,
+    "category": "Arithmetic",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "22 + 24 × 2 = ?",
+    "choices": [
+      "73",
+      "68",
+      "71",
+      "70"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Multiply before adding.",
+      "24 × 2 = 48",
+      "22 + 48 = 70"
+    ]
+  },
+  {
+    "id": 98,
+    "category": "Percentages",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "30% of 310 = ?",
+    "choices": [
+      "94",
+      "91",
+      "96",
+      "93"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "30% = 30/100",
+      "310 × 30 ÷ 100",
+      "The result is 93"
+    ]
+  },
+  {
+    "id": 99,
+    "category": "Algebra",
+    "difficulty": "Medium",
+    "heading": "Find x",
+    "question": "6x + 25 = 163",
+    "choices": [
+      "21",
+      "24",
+      "23",
+      "26"
+    ],
+    "correct_index": 2,
+    "explanations": [
+      "Subtract 25 from both sides.",
+      "6x = 138",
+      "x = 138 ÷ 6 = 23"
+    ]
+  },
+  {
+    "id": 100,
+    "category": "Patterns",
+    "difficulty": "Medium",
+    "heading": "Can you solve it?",
+    "question": "529 → 576 → 625 → 676 → ?",
+    "choices": [
+      "732",
+      "730",
+      "727",
+      "729"
+    ],
+    "correct_index": 3,
+    "explanations": [
+      "Squares: 23², 24², 25², 26²",
+      "Next is 27²",
+      "27 × 27 = 729"
+    ]
+  }
+]
