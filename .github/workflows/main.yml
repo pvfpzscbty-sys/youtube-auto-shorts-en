@@ -1,6 +1,10 @@
-name: Pico Brain Challenge - Test
+name: Pico Brain Challenge - Auto
 
 on:
+  schedule:
+    - cron: '0 17 * * *'
+    - cron: '0 23 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       video_slot:
@@ -31,9 +35,20 @@ jobs:
           sudo apt-get install -y ffmpeg fonts-noto-cjk
           python -m pip install pillow google-api-python-client google-auth google-auth-httplib2
 
-      - name: Create video
+      - name: Set video slot
         env:
-          VIDEO_SLOT: ${{ inputs.video_slot || '0' }}
+          SCHEDULE: ${{ github.event.schedule }}
+          MANUAL_SLOT: ${{ inputs.video_slot }}
+        run: |
+          case "$SCHEDULE" in
+            "0 17 * * *") SLOT=0 ;;
+            "0 23 * * *") SLOT=1 ;;
+            "0 3 * * *") SLOT=2 ;;
+            *) SLOT="${MANUAL_SLOT:-0}" ;;
+          esac
+          echo "VIDEO_SLOT=$SLOT" >> "$GITHUB_ENV"
+
+      - name: Create video
         run: python create_video.py
 
       - name: Save video
@@ -41,10 +56,12 @@ jobs:
         with:
           name: youtube-short
           path: output/short.mp4
+          retention-days: 3
 
       - name: Upload to YouTube
         env:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID_EN }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET_EN }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN_EN }}
+          VIDEO_PRIVACY: public
         run: python upload_video.py
