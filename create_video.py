@@ -1,51 +1,106 @@
-
 import os
 import json
 import math
 import random
 import subprocess
+from collections import defaultdict, deque
 from pathlib import Path
 from datetime import datetime, date, timezone, timedelta
 from PIL import Image, ImageDraw, ImageFont
 
-# 日本時間と投稿枠
 JST = timezone(timedelta(hours=9))
 today = datetime.now(JST).date()
 slot = int(os.environ.get("VIDEO_SLOT", "0"))
 
 if slot not in (0, 1, 2):
-    raise ValueError("VIDEO_SLOTは0、1、2のみ")
+    raise ValueError("Invalid VIDEO_SLOT")
 
-# 100 questionsを順番に使用
 questions = json.loads(
     Path("questions.json").read_text(encoding="utf-8")
 )
-if len(questions) != 100:
-    raise ValueError("問題数が100 questionsではありません")
+
+if not questions:
+    raise ValueError("Question bank is empty")
+
+# Validate all questions
+seen = set()
+
+for item in questions:
+    if len(item["choices"]) != 4:
+        raise ValueError("Invalid choices")
+    if len(item["explanations"]) != 3:
+        raise ValueError("Invalid explanations")
+    if not 0 <= int(item["correct_index"]) < 4:
+        raise ValueError("Invalid correct_index")
+    key = item["question"].strip()
+    if key in seen:
+        raise ValueError("Duplicate question: " + key)
+    seen.add(key)
+
+# Mix categories without repeating questions
+rng = random.Random(20261124)
+groups = defaultdict(list)
+
+for item in questions:
+    groups[item["category"]].append(item)
+
+for category in groups:
+    rng.shuffle(groups[category])
+
+groups = {
+    category: deque(items)
+    for category, items in groups.items()
+}
+
+mixed = []
+previous = None
+
+while any(groups.values()):
+    available = [
+        category for category in groups
+        if groups[category] and category != previous
+    ]
+
+    if not available:
+        available = [
+            category for category in groups
+            if groups[category]
+        ]
+
+    category = max(
+        available,
+        key=lambda c: len(groups[c])
+    )
+
+    mixed.append(groups[category].popleft())
+    previous = category
 
 start_date = date(2026, 11, 24)
 day_index = (today - start_date).days
-index = (day_index * 3 + slot) % len(questions)
-q = questions[index]
+index = (day_index * 3 + slot) % len(mixed)
 
-choices = q["choices"]
-correct_index = int(q["correct_index"])
-answer = choices[correct_index]
+q = mixed[index]
+
+# Shuffle answer positions deterministically
+answer = q["choices"][int(q["correct_index"])]
+order = list(range(4))
+
+answer_rng = random.Random(20261124 + index)
+answer_rng.shuffle(order)
+
+choices = [q["choices"][i] for i in order]
+correct_index = order.index(int(q["correct_index"]))
 explanations = q["explanations"]
 
-if len(choices) != 4 or len(explanations) != 3:
-    raise ValueError("問題データの形式が不正です")
-if not 0 <= correct_index < 4:
-    raise ValueError("正解番号が不正です")
-
-# タイトルも自動生成
 os.makedirs("output", exist_ok=True)
 
 title = (
-    f"{q['difficulty']}: "
-    f"{q['category']} Quiz! "
-    f"Can you solve it? #Shorts"
+    f"{q['category']} Challenge: "
+    f"{q['question']} #Shorts"
 )
+
+if len(title) > 100:
+    title = title[:89].rstrip() + "... #Shorts"
 
 metadata = {
     "title": title,
@@ -53,7 +108,7 @@ metadata = {
         f"Try this {q['category']} puzzle!\n"
         "Watch for the answer and explanation.\n"
         "Comment how fast you solved it!\n"
-        "#BrainTeaser #MathQuiz #Shorts"
+        "#BrainTeaser #Quiz #Shorts"
     )
 }
 
@@ -70,11 +125,14 @@ font_path = (
     "/usr/share/fonts/opentype/noto/"
     "NotoSansCJK-Regular.ttc"
 )
+
 fonts = {}
 
 def font(size):
     if size not in fonts:
-        fonts[size] = ImageFont.truetype(font_path, size)
+        fonts[size] = ImageFont.truetype(
+            font_path, size
+        )
     return fonts[size]
 
 def fit_size(draw, text, size, max_width):
@@ -90,81 +148,172 @@ def fit_size(draw, text, size, max_width):
 def center(draw, text, y, size=36,
            color="white", max_width=600):
     size = fit_size(draw, text, size, max_width)
+
     draw.text(
         (W // 2, y), str(text),
         font=font(size),
         fill=color, anchor="mt"
     )
 
+def wrap_text(draw, text, size, max_width):
+    lines = []
+    line = ""
+
+    for word in str(text).split():
+        candidate = (
+            line + " " + word if line else word
+        )
+
+        if (
+            draw.textlength(
+                candidate, font=font(size)
+            ) > max_width and line
+        ):
+            lines.append(line)
+            line = word
+        else:
+            line = candidate
+
+    if line:
+        lines.append(line)
+
+    return lines
+
+def text_block(draw, text, y, size,
+               max_width, max_height,
+               color="white"):
+
+    while size > 14:
+        lines = wrap_text(
+            draw, text, size, max_width
+        )
+
+        line_height = size + 8
+
+        if len(lines) * line_height <= max_height:
+            break
+
+        size -= 2
+
+    lines = wrap_text(
+        draw, text, size, max_width
+    )
+
+    line_height = size + 8
+    top = y - len(lines) * line_height // 2
+
+    for line in lines:
+        center(
+            draw, line, top, size,
+            color, max_width
+        )
+        top += line_height
+
 def rounded(draw, xy, fill,
             outline=None, width=2, radius=20):
+
     draw.rounded_rectangle(
         xy, radius=radius, fill=fill,
         outline=outline, width=width
     )
 
-# ネオン背景
-background = Image.new("RGB", (W, H), "#20132F")
+# Different colors for each category
+palettes = [
+    ("#20132F", "#C69CFF"),
+    ("#0B1430", "#6BDFFF"),
+    ("#10291F", "#75FFBB"),
+    ("#301A35", "#FFA8EE"),
+    ("#302313", "#FFD166"),
+    ("#302020", "#FF9999"),
+    ("#102C32", "#71E8E8")
+]
+
+categories = sorted({
+    item["category"] for item in questions
+})
+
+category_index = categories.index(q["category"])
+
+base, accent = palettes[
+    category_index % len(palettes)
+]
+
+background = Image.new("RGB", (W, H), base)
 bd = ImageDraw.Draw(background)
 
+rgb = tuple(
+    int(base[i:i+2], 16) for i in (1, 3, 5)
+)
+
 for y in range(H):
-    glow = int(22 * (1 + math.sin(y / 180)) / 2)
+    glow = int(
+        22 * (1 + math.sin(y / 180)) / 2
+    )
+
     bd.line(
         (0, y, W, y),
-        fill=(35 + glow // 2,
-              12 + glow // 2, 48 + glow)
+        fill=tuple(
+            min(255, c + glow) for c in rgb
+        )
     )
 
 def make_frame(t):
     img = background.copy()
     d = ImageDraw.Draw(img)
 
-    # 動く光の粒
     for i in range(30):
         x = (i * 193 + 37) % W
         y = int((i * 257 + 71 - t * 13) % H)
         r = 2 + i % 3
+
         d.ellipse(
             (x-r, y-r, x+r, y+r),
             fill="#3465A0"
         )
 
-    # 光る外枠
-    pulse = int(20 * math.sin(t * 2))
-    border = (175, 100 + pulse, 245)
     d.rounded_rectangle(
         (25, 45, 695, 1230),
-        radius=35, outline=border, width=4
+        radius=35,
+        outline=accent,
+        width=4
     )
 
-    center(d, "PICO BRAIN CHALLENGE",
-           80, 30, "#6BDFFF")
-    center(d, "DAILY MIND PUZZLES",
-           135, 34, "#FFD166")
+    center(
+        d, "PICO BRAIN CHALLENGE",
+        80, 30, accent
+    )
+
+    center(
+        d, "DAILY MIND PUZZLES",
+        135, 34, "#FFD166"
+    )
 
     rounded(
-        d, (215, 212, 505, 270),
-        "#20385E", "#6BDFFF"
+        d, (110, 212, 610, 270),
+        "#20385E", accent
     )
+
     center(
         d,
         f"{q['category']} / {q['difficulty']}",
-        220, 30
+        220, 30,
+        max_width=470
     )
 
     center(d, q["heading"], 315, 44)
 
-    # 問題表示
+    # Multiline question display
     rounded(
-        d, (55, 425, 665, 565),
-        "#172D50", "#3FD8FF", 4
-    )
-    center(
-        d, q["question"], 467, 42,
-        max_width=565
+        d, (55, 405, 665, 585),
+        "#172D50", accent, 4
     )
 
-    # 4択
+    text_block(
+        d, q["question"],
+        495, 42, 555, 160
+    )
+
+    # Answer choices
     for i, value in enumerate(choices):
         x = 65 + (i % 2) * 305
         y = 615 + (i // 2) * 115
@@ -177,6 +326,7 @@ def make_frame(t):
             if revealed and is_correct
             else "#1D3156"
         )
+
         edge = (
             "#52FFB8"
             if revealed and is_correct
@@ -190,18 +340,20 @@ def make_frame(t):
 
         label = f"{'ABCD'[i]}: {value}"
         size = fit_size(d, label, 34, 255)
+
         d.text(
             (x+15, y+22),
-            label, font=font(size),
+            label,
+            font=font(size),
             fill="white"
         )
 
-    # 時間に合わせた演出
     if t < 4:
         center(
             d, "Can you solve it?",
             910, 47, "#FFD166"
         )
+
         center(
             d, "Pick your answer!",
             1005, 30
@@ -209,6 +361,7 @@ def make_frame(t):
 
     elif t < 17:
         remain = math.ceil(17-t)
+
         center(
             d, f"{remain} seconds left",
             910, 48, "#FFD166"
@@ -218,13 +371,17 @@ def make_frame(t):
             d, (90, 1010, 630, 1030),
             "#31466A"
         )
+
         width = int(
             540 * max(0, (17-t)/13)
         )
+
         if width > 0:
             rounded(
-                d, (90, 1010, 90+width, 1030),
-                "#4DE0FF", radius=8
+                d,
+                (90, 1010, 90+width, 1030),
+                accent,
+                radius=8
             )
 
         center(
@@ -234,9 +391,11 @@ def make_frame(t):
 
     elif t < 20:
         center(
-            d, f"Correct: {'ABCD'[correct_index]}！",
+            d,
+            f"Correct: {'ABCD'[correct_index]}!",
             915, 52, "#66FFB8"
         )
+
         center(
             d, f"Answer: {answer}",
             1015, 36, "#FFD166"
@@ -245,7 +404,7 @@ def make_frame(t):
     elif t < 28:
         center(
             d, "Here is why",
-            890, 35, "#FFD166"
+            870, 35, "#FFD166"
         )
 
         phase = min(
@@ -253,10 +412,14 @@ def make_frame(t):
         )
 
         for i in range(phase):
-            center(
-                d, explanations[i],
-                960 + i*65,
-                31, "#80E8FF"
+            text_block(
+                d,
+                explanations[i],
+                950 + i*80,
+                30,
+                580,
+                75,
+                "#80E8FF"
             )
 
     else:
@@ -264,26 +427,29 @@ def make_frame(t):
             d, f"Answer: {answer}",
             920, 43, "#66FFB8"
         )
+
         center(
             d, "Did you get it? Comment!",
             1040, 29, "#FFD166"
         )
 
-    # 進行ゲージ
     rounded(
         d, (60, 1185, 660, 1195),
         "#334566", radius=4
     )
+
     progress = int(600*t/DURATION)
+
     if progress > 0:
         rounded(
-            d, (60, 1185, 60+progress, 1195),
-            "#FFD166", radius=4
+            d,
+            (60, 1185, 60+progress, 1195),
+            "#FFD166",
+            radius=4
         )
 
     return img
 
-# 動画と仮音声を生成
 cmd = [
     "ffmpeg", "-y",
     "-f", "rawvideo",
@@ -293,7 +459,8 @@ cmd = [
     "-r", str(FPS),
     "-i", "-",
     "-f", "lavfi",
-    "-i", "sine=frequency=440:sample_rate=44100",
+    "-i",
+    "sine=frequency=440:sample_rate=44100",
     "-filter_complex",
     "[1:a]volume=0.015,atrim=duration=30[a]",
     "-map", "0:v",
@@ -320,10 +487,10 @@ finally:
     proc.stdin.close()
 
 if proc.wait() != 0:
-    raise RuntimeError("動画生成に失敗しました")
+    raise RuntimeError("Video generation failed")
 
-print("動画生成成功")
-print("問題番号:", index+1)
-print("ジャンル:", q["category"])
-print("正解:", answer)
-print("タイトル:", title)
+print("Video generated successfully")
+print("Question ID:", q["id"])
+print("Category:", q["category"])
+print("Answer:", answer)
+print("Title:", title)
