@@ -44,7 +44,7 @@ request = youtube.videos().insert(
             "defaultLanguage": "en",
         },
         "status": {
-            "privacyStatus": os.environ.get("VIDEO_PRIVACY", "private")
+            "privacyStatus": os.environ.get("VIDEO_PRIVACY", "public")
         },
     },
     media_body=MediaFileUpload(
